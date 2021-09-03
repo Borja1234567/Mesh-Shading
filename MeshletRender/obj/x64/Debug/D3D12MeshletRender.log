@@ -1,0 +1,40 @@
+﻿MeshletMS.hlsl(76,1): warning GA22320BD: effect state block ignored - effect syntax is deprecated. To use braces as an initializer use them with equal signs.
+  {
+  ^
+MeshletMS.hlsl(515,8): warning GF0156036: variable 'ptoCtrlA' is used uninitialized whenever 'if' condition is false
+                          if (indice < numPtos[meshletIndex] - numPtos[meshletIndex - 1]) {
+                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  MeshletMS.hlsl:536:31: note: uninitialized use occurs here
+          vout.PositionVS = mul(float4(ptoCtrlA, 1), Globals.WorldView).xyz;
+                                       ^~~~~~~~
+  MeshletMS.hlsl:515:4: note: remove the 'if' if its condition is always true
+                          if (indice < numPtos[meshletIndex] - numPtos[meshletIndex - 1]) {
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MeshletMS.hlsl(504,7): warning GF0156036: variable 'ptoCtrlA' is used uninitialized whenever 'if' condition is false
+                  if (indice < numPtos[0]) {
+                      ^~~~~~~~~~~~~~~~~~~
+  MeshletMS.hlsl:536:31: note: uninitialized use occurs here
+          vout.PositionVS = mul(float4(ptoCtrlA, 1), Globals.WorldView).xyz;
+                                       ^~~~~~~~
+  MeshletMS.hlsl:504:3: note: remove the 'if' if its condition is always true
+                  if (indice < numPtos[0]) {
+                  ^~~~~~~~~~~~~~~~~~~~~~~~~
+  MeshletMS.hlsl:461:2: note: variable 'ptoCtrlA' is declared here
+          float3 ptoCtrlA, ptoCtrlB, ptoCtrlC, ptoCtrlD;
+          ^
+MeshletMS.hlsl(508,74): warning GF0156036: variable 'posU' may be uninitialized when used here
+                          ptoCtrlA = NurbsEval2(MeshInfo.Pos.x, MeshInfo.Pos.y, MeshInfo.Pos.z, posU, posV);
+                                                                                                ^~~~
+  MeshletMS.hlsl:464:12: note: initialize the variable 'posU' to silence this warning
+          float posU, posV;
+                    ^
+                     = 0.0
+MeshletMS.hlsl(508,80): warning GF0156036: variable 'posV' may be uninitialized when used here
+                          ptoCtrlA = NurbsEval2(MeshInfo.Pos.x, MeshInfo.Pos.y, MeshInfo.Pos.z, posU, posV);
+                                                                                                      ^~~~
+  MeshletMS.hlsl:464:18: note: initialize the variable 'posV' to silence this warning
+          float posU, posV;
+                          ^
+                           = 0.0
+  
+  D3D12MeshletRender.vcxproj -> C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\bin\x64\Debug\D3D12MeshletRender.exe

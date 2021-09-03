@@ -1,0 +1,852 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C6386",
+          "message": {
+            "text": "Saturación de búfer al escribir en 'puntos':  el tamaño de escritura son 'tamanho' bytes, pero se pueden escribir '16' bytes."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                },
+                "region": {
+                  "startLine": 43,
+                  "startColumn": 4,
+                  "endLine": 43,
+                  "endColumn": 51
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "??0SpfNurbs@@QEAA@HHHHHH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 30,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 31,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 32,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 33,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 34,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 35,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 36,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 37,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 39,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 40,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 41,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 42,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 42,
+                            "startColumn": 21
+                          }
+                        },
+                        "message": {
+                          "text": "Entrar en este bucle, (se asume 'i<this->numCvsU')"
+                        }
+                      },
+                      "kinds": [
+                        "bifurcar"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 43,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 44,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 42,
+                            "startColumn": 39
+                          }
+                        },
+                        "message": {
+                          "text": "'i' puede ser igual a 1"
+                        }
+                      },
+                      "kinds": [
+                        "declaración"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 42,
+                            "startColumn": 21
+                          }
+                        },
+                        "message": {
+                          "text": "Continuar este bucle, (se asume 'i<this->numCvsU')"
+                        }
+                      },
+                      "kinds": [
+                        "bifurcar"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 43,
+                            "startColumn": 14
+                          }
+                        },
+                        "message": {
+                          "text": "Escritura no válida en 'puntos', (fuera del intervalo de escritura)"
+                        }
+                      },
+                      "kinds": [
+                        "uso"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C6386",
+          "message": {
+            "text": "Saturación de búfer al escribir en 'weight':  el tamaño de escritura son 'sizeof(float)*this->numCvsU' bytes, pero se pueden escribir '16' bytes."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                },
+                "region": {
+                  "startLine": 44,
+                  "startColumn": 4,
+                  "endLine": 44,
+                  "endColumn": 51
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "??0SpfNurbs@@QEAA@HHHHHH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 30,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 31,
+                            "startColumn": 19
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 32,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 33,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 34,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 35,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 36,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 37,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 39,
+                            "startColumn": 7
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 40,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 41,
+                            "startColumn": 16
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 42,
+                            "startColumn": 12
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 42,
+                            "startColumn": 21
+                          }
+                        },
+                        "message": {
+                          "text": "Entrar en este bucle, (se asume 'i<this->numCvsU')"
+                        }
+                      },
+                      "kinds": [
+                        "bifurcar"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 43,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 44,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 42,
+                            "startColumn": 39
+                          }
+                        },
+                        "message": {
+                          "text": "'i' puede ser igual a 1"
+                        }
+                      },
+                      "kinds": [
+                        "declaración"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 42,
+                            "startColumn": 21
+                          }
+                        },
+                        "message": {
+                          "text": "Continuar este bucle, (se asume 'i<this->numCvsU')"
+                        }
+                      },
+                      "kinds": [
+                        "bifurcar"
+                      ],
+                      "importance": "important"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 43,
+                            "startColumn": 14
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                          },
+                          "region": {
+                            "startLine": 44,
+                            "startColumn": 14
+                          }
+                        },
+                        "message": {
+                          "text": "Escritura no válida en 'weight', (fuera del intervalo de escritura)"
+                        }
+                      },
+                      "kinds": [
+                        "uso"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable \"SpfNurbs::minV\" no está inicializada. Siempre debe inicializarse una variable miembro (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                },
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 2,
+                  "endLine": 29,
+                  "endColumn": 2
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "??0SpfNurbs@@QEAA@HHHHHH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": [],
+          "properties": {
+            "targetSymbol": "SpfNurbs::minV"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable \"SpfNurbs::minU\" no está inicializada. Siempre debe inicializarse una variable miembro (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                },
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 2,
+                  "endLine": 29,
+                  "endColumn": 2
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "??0SpfNurbs@@QEAA@HHHHHH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": [],
+          "properties": {
+            "targetSymbol": "SpfNurbs::minU"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable \"SpfNurbs::maxV\" no está inicializada. Siempre debe inicializarse una variable miembro (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                },
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 2,
+                  "endLine": 29,
+                  "endColumn": 2
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "??0SpfNurbs@@QEAA@HHHHHH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": [],
+          "properties": {
+            "targetSymbol": "SpfNurbs::maxV"
+          }
+        },
+        {
+          "ruleId": "C26495",
+          "message": {
+            "text": "La variable \"SpfNurbs::maxU\" no está inicializada. Siempre debe inicializarse una variable miembro (type.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+                },
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 2,
+                  "endLine": 29,
+                  "endColumn": 2
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "??0SpfNurbs@@QEAA@HHHHHH@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "suppressions": [],
+          "properties": {
+            "targetSymbol": "SpfNurbs::maxU"
+          }
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.28.29914.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "commandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29910\\bin\\HostX86\\x64\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x00A1B1C0 -allChunksReserved -il C:\\Users\\Borja\\AppData\\Local\\Temp\\_CL_bc40c916ast -typedil -f SpfNurbs.cpp -Ze -D_MSC_EXTENSIONS -Zp16 -pc \\:/ -D_MSC_VER=1928 -D_MSC_FULL_VER=192829914 -D_MSC_BUILD=0 -D_M_AMD64=100 -ZILP448 -D_M_X64=100 -D_WIN64 -D_WIN32 -GR -D_CPPRTTI -I C:\\Users\\Borja\\Desktop\\meshShaderP2\\D3D12MeshShaders\\src\\DXUT\\Core -I C:\\Users\\Borja\\Desktop\\meshShaderP2\\D3D12MeshShaders\\src\\DXUT\\Optional -nologo -W 3 -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -permissive- -Zc:wchar_t -Zc:forScope -Yustdafx.h -Fpobj\\x64\\Debug\\D3D12MeshletRender.pch -Foobj\\x64\\Debug\\SpfNurbs.obj -Fdobj\\x64\\Debug\\vc142.pdb -Gd -analyze:projectdirectory C:\\Users\\Borja\\Desktop\\meshShaderP2\\D3D12MeshShaders\\src\\MeshletRender -analyze:rulesetdirectory ;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\Rule Sets\\NativeRecommendedRules.ruleset -analyze:quiet -analyze:plugin C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29910\\bin\\HostX86\\x86\\EspXEngine.dll -FC -errorreport:prompt -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29910\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29910\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um",
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/SpfNurbs.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "7fcbcdcf2807e40b52b5b7ffbb6dddf5"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/borja/desktop/meshshaderp2/d3d12meshshaders/src/meshletrender/stdafx.h"
+          },
+          "hashes": {
+            "md5": "43722957f70ac16aaf747616a2c97d66"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/borja/desktop/meshshaderp2/d3d12meshshaders/src/meshletrender/d3dx12.h"
+          },
+          "hashes": {
+            "md5": "b5140c10393c5f4841e8e3703e93894b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/borja/desktop/meshshaderp2/d3d12meshshaders/src/meshletrender/punto.h"
+          },
+          "hashes": {
+            "md5": "529f1e7235da7e33907c1718e8a2633f"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/borja/desktop/meshshaderp2/d3d12meshshaders/src/meshletrender/matriz.h"
+          },
+          "hashes": {
+            "md5": "4ea0ae1a8adcd22a9f6be581d8bc2ee8"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/borja/desktop/meshshaderp2/d3d12meshshaders/src/meshletrender/configuracion.h"
+          },
+          "hashes": {
+            "md5": "6a88af5f4e8364300b502564eee0b4c4"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/borja/desktop/meshshaderp2/d3d12meshshaders/src/meshletrender/constantes.h"
+          },
+          "hashes": {
+            "md5": "9864919e7f88d31e61c14e3fbddd64fd"
+          }
+        }
+      ]
+    }
+  ]
+}

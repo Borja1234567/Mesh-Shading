@@ -1,0 +1,1002 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C6001",
+          "message": {
+            "text": "Usando la memoria sin inicializar '*pParameters_1_0.DescriptorTable.pDescriptorRanges'."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                },
+                "region": {
+                  "startLine": 2260,
+                  "startColumn": 63,
+                  "endLine": 2260,
+                  "endColumn": 157
+                }
+              },
+              "logicalLocations": [
+                {
+                  "decoratedName": "?D3DX12SerializeVersionedRootSignature@@YAJPEBUD3D12_VERSIONED_ROOT_SIGNATURE_DESC@@W4D3D_ROOT_SIGNATURE_VERSION@@PEAPEAUID3D10Blob@@2@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ],
+          "codeFlows": [
+            {
+              "threadFlows": [
+                {
+                  "locations": [
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2168,
+                            "startColumn": 21
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2170,
+                            "startColumn": 22
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2173,
+                            "startColumn": 13
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2175,
+                            "startColumn": 9
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2176,
+                            "startColumn": 39
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2181,
+                            "startColumn": 17
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2183,
+                            "startColumn": 29
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2184,
+                            "startColumn": 53
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2186,
+                            "startColumn": 34
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2187,
+                            "startColumn": 25
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2188,
+                            "startColumn": 44
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2192,
+                            "startColumn": 26
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2194,
+                            "startColumn": 25
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2196,
+                            "startColumn": 35
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2196,
+                            "startColumn": 44
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2198,
+                            "startColumn": 29
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2199,
+                            "startColumn": 62
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2200,
+                            "startColumn": 65
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2202,
+                            "startColumn": 60
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2217,
+                            "startColumn": 29
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2218,
+                            "startColumn": 67
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2220,
+                            "startColumn": 46
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2221,
+                            "startColumn": 37
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2222,
+                            "startColumn": 62
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2226,
+                            "startColumn": 38
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2228,
+                            "startColumn": 37
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2230,
+                            "startColumn": 47
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2230,
+                            "startColumn": 56
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2241,
+                            "startColumn": 60
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2242,
+                            "startColumn": 63
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2243,
+                            "startColumn": 61
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2196,
+                            "startColumn": 71
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2196,
+                            "startColumn": 44
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2198,
+                            "startColumn": 29
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2199,
+                            "startColumn": 62
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2200,
+                            "startColumn": 65
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2202,
+                            "startColumn": 60
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2217,
+                            "startColumn": 29
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2218,
+                            "startColumn": 67
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2220,
+                            "startColumn": 46
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2221,
+                            "startColumn": 37
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2222,
+                            "startColumn": 62
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2226,
+                            "startColumn": 38
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2228,
+                            "startColumn": 37
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2230,
+                            "startColumn": 47
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2230,
+                            "startColumn": 56
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2241,
+                            "startColumn": 60
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2242,
+                            "startColumn": 63
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2243,
+                            "startColumn": 61
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2196,
+                            "startColumn": 71
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2196,
+                            "startColumn": 44
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2248,
+                            "startColumn": 25
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2250,
+                            "startColumn": 53
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2251,
+                            "startColumn": 28
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2254,
+                            "startColumn": 25
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2256,
+                            "startColumn": 35
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2256,
+                            "startColumn": 44
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2258,
+                            "startColumn": 71
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2260,
+                            "startColumn": 41
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2256,
+                            "startColumn": 71
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2256,
+                            "startColumn": 44
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2258,
+                            "startColumn": 71
+                          }
+                        }
+                      },
+                      "importance": "unimportant"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2260,
+                            "startColumn": 41
+                          }
+                        },
+                        "message": {
+                          "text": "'*pParameters_1_0.DescriptorTable.pDescriptorRanges' no se ha inicializado"
+                        }
+                      },
+                      "kinds": [
+                        "declaración"
+                      ],
+                      "importance": "essential"
+                    },
+                    {
+                      "location": {
+                        "physicalLocation": {
+                          "artifactLocation": {
+                            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+                          },
+                          "region": {
+                            "startLine": 2260,
+                            "startColumn": 63
+                          }
+                        },
+                        "message": {
+                          "text": "Se usa '*pParameters_1_0.DescriptorTable.pDescriptorRanges', pero puede que no se haya inicializado"
+                        }
+                      },
+                      "kinds": [
+                        "uso"
+                      ],
+                      "importance": "essential"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "suppressions": []
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.28.29914.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "commandLine": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29910\\bin\\HostX86\\x64\\c1xx.dll\" -ACf{1F7B090C-16DB-4822-966A-A93D26ED4681} -ACpmspft140.dll -Alint -D_PREFAST_ -D_AST_FE_ -Analyze -zm0x00A1B1C0 -il C:\\Users\\Borja\\AppData\\Local\\Temp\\_CL_c4357507ast -typedil -f stdafx.cpp -Ze -D_MSC_EXTENSIONS -Zp16 -pc \\:/ -D_MSC_VER=1928 -D_MSC_FULL_VER=192829914 -D_MSC_BUILD=0 -D_M_AMD64=100 -ZILP448 -D_M_X64=100 -D_WIN64 -D_WIN32 -GR -D_CPPRTTI -I C:\\Users\\Borja\\Desktop\\meshShaderP2\\D3D12MeshShaders\\src\\DXUT\\Core -I C:\\Users\\Borja\\Desktop\\meshShaderP2\\D3D12MeshShaders\\src\\DXUT\\Optional -nologo -W 3 -diagnostics:column -D_GUARDOVERFLOW_CRT_ALLOCATORS=1 -Ot -DCODE_ANALYSIS -D_UNICODE -DUNICODE -EHs -D_CPPUNWIND -EHc -D__MSVC_RUNTIME_CHECKS -RTCs -RTCu -MDd -D_DEBUG -D_MT -D_DLL -GS -D_M_FP_PRECISE -permissive- -Zc:wchar_t -Zc:forScope -Ycstdafx.h -Fpobj\\x64\\Debug\\D3D12MeshletRender.pch -Foobj\\x64\\Debug\\stdafx.obj -Fdobj\\x64\\Debug\\vc142.pdb -Gd -analyze:projectdirectory C:\\Users\\Borja\\Desktop\\meshShaderP2\\D3D12MeshShaders\\src\\MeshletRender -analyze:rulesetdirectory ;C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\\\Rule Sets; -analyze:ruleset C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Team Tools\\Static Analysis Tools\\Rule Sets\\NativeRecommendedRules.ruleset -analyze:quiet -analyze:plugin C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29910\\bin\\HostX86\\x86\\EspXEngine.dll -FC -errorreport:prompt -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29910\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.28.29910\\atlmfc\\include -I C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Auxiliary\\VS\\include -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\ucrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\um -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\shared -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\winrt -I C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.19041.0\\cppwinrt -I C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um",
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/Borja/Desktop/meshShaderP2/D3D12MeshShaders/src/MeshletRender/d3dx12.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "md5": "b5140c10393c5f4841e8e3703e93894b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/borja/desktop/meshshaderp2/d3d12meshshaders/src/meshletrender/stdafx.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "md5": "056c6bfe3f23e1b6481aadbec89099be"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/borja/desktop/meshshaderp2/d3d12meshshaders/src/meshletrender/stdafx.h"
+          },
+          "hashes": {
+            "md5": "43722957f70ac16aaf747616a2c97d66"
+          }
+        }
+      ]
+    }
+  ]
+}
