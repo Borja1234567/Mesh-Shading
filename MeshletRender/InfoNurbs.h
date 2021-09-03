@@ -17,9 +17,6 @@ public:
 	float* getPuntosX() { return puntosX; };
 	float* getPuntosY() { return puntosY; };
 	float* getPuntosZ() { return puntosZ; };
-	int* getNumPuntosC() { return nPuntosC; };
-	//int* getNumSpfT() { return nSpfT; };
-	int* getNumSpfC() { return nSpfC; };
 	float* getPesos() { return pesos; };
 	float* getKnotsU() { return knotsU; };
 	float* getKnotsV() { return knotsV; };
@@ -41,9 +38,6 @@ private:
 	float* puntosX;
 	float* puntosY;
 	float* puntosZ;
-	int* nPuntosC;
-	int* nSpfC;
-	//int* nSpfT;
 	float* pesos;
 	float* knotsU;
 	float* knotsV;

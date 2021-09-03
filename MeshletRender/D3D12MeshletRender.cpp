@@ -13,130 +13,15 @@
 #include "D3D12MeshletRender.h"
 #include "EscenaNurbs.h"
 
-const DWORD MIN_DIVS = 1;
-const DWORD MAX_DIVS = 64;
-//L"..\\Assets\\Dragon_LOD0.bin"
-//AircraftHinge.iges
-const wchar_t* D3D12MeshletRender::c_meshFilename = L"..\\Assets\\Dragon_LOD0.bin";
 
 const wchar_t* D3D12MeshletRender::c_meshShaderFilename = L"MeshletMS.cso";
 const wchar_t* D3D12MeshletRender::c_pixelShaderFilename = L"MeshletPS.cso";
 EscenaNurbs* gEscena;
-struct CB_PER_FRAME_CONSTANTS
-{
-    XMFLOAT4X4 mViewProjection;
-    XMFLOAT4X4 mView;
-    XMFLOAT3 vCameraPosWorld;
-    float fTessellationFactor;
-};
 
-struct CB_KNOTS
-{
-    float* knotsU;
-    float* knotsV;
-};
-struct CB_TABLA
-{
-    //int inicioSpf;
-    XMFLOAT3 spf;
-    //D3DXVECTOR2 dim;
-    //D3DXVECTOR2 Knotsdim;
-    //D3DXVECTOR2 Knots;
-};
-
-struct CB_NURBS
-{
-    float* ptosX;//[18000];
-    float* ptosY;//[18000];
-    float* ptosZ;//[18000];
-    float* pesos;//[18000];
-    float* knotsU;//[2000];
-    float* knotsV;//[2000];
-};
-
-ID3D12Resource* g_pcbPerFrame = NULL;
-ID3D12Resource* g_pcbTabla = NULL;
-ID3D12Resource* g_pcbPtosX = NULL;
-ID3D12Resource* g_pcbPtosY = NULL;
-ID3D12Resource* g_pcbPtosZ = NULL;
-ID3D12Resource* g_pcbPesos = NULL;
-ID3D12Resource* g_pcbKnotsU = NULL;
-ID3D12Resource* g_pcbKnotsV = NULL;
-ID3D12Resource* g_pcbPtos = NULL;
-
-ID3D12Resource* g_pcbTablePtos = NULL;
-ID3D12Resource* g_pcbTableKnots = NULL;
-D3D12_SHADER_RESOURCE_VIEW_DESC* g_ptbPtos = NULL;
-D3D12_SHADER_RESOURCE_VIEW_DESC* g_ptbPesos = NULL;
-D3D12_SHADER_RESOURCE_VIEW_DESC* g_ptbKnotsU = NULL;
-D3D12_SHADER_RESOURCE_VIEW_DESC* g_ptbKnotsV = NULL;
-D3D12_SHADER_RESOURCE_VIEW_DESC* g_ptbTablePtos = NULL;
-D3D12_SHADER_RESOURCE_VIEW_DESC* g_ptbTableKnots = NULL;
-
-/*
-CDXUTDialogResourceManager          g_DialogResourceManager; // manager for shared resources of dialogs
-CModelViewerCamera                  g_Camera;                // A model viewing camera
-CD3DSettingsDlg                     g_D3DSettingsDlg;        // Device settings dialog
-CDXUTDialog                         g_HUD;                   // manages the 3D
-CDXUTDialog                         g_SampleUI;              // dialog for sample specific controls
-*/
-
-// Control variables
-
-float despl = 1;
-int avance = 1;
-float curX = -0.0f;
-float curY = -0.0f;
-float curZ = -0.0f;
-
-int numRepet = 0;
 int numFich = 0;
-float                               g_fSubdivs = 4;          // Startup subdivisions per side
-bool                                g_bDrawWires = false;    // Draw the mesh with wireframe overlay
-#define MAXFRAMES 300
-#define MAX_ITERACIONES 50000//100000 /**5000**20000*/
-
-float frames[MAX_ITERACIONES];
-int iteracion = 0;
-int inicFrames = 0;
 
 InfoNurbs* info;
-enum E_PARTITION_MODE
-{
-    PARTITION_INTEGER,
-    PARTITION_FRACTIONAL_EVEN,
-    PARTITION_FRACTIONAL_ODD
-};
 
-E_PARTITION_MODE                    g_iPartitionMode = PARTITION_INTEGER;
-
-int nIteracion = 0;
-using namespace std;
-
-//--------------------------------------------------------------------------------------
-// UI control IDs
-//--------------------------------------------------------------------------------------
-#define IDC_TOGGLEFULLSCREEN      1
-#define IDC_TOGGLEREF             3
-#define IDC_CHANGEDEVICE          4
-
-#define IDC_PATCH_SUBDIVS         5
-#define IDC_PATCH_SUBDIVS_STATIC  6
-#define IDC_TOGGLE_LINES          7
-#define IDC_PARTITION_MODE        8
-#define IDC_PARTITION_INTEGER     9
-#define IDC_PARTITION_FRAC_EVEN   10
-#define IDC_PARTITION_FRAC_ODD    11
-
-//void CALLBACK OnGUIEvent(UINT nEvent, int nControlID, CDXUTControl* pControl, void* pUserContext);
-
-long numPrimitives[MAX_ITERACIONES];
-long maxNumPrimitives = 0;
-long minNumPrimitives = 0;
-long numPrimitivesDS[MAX_ITERACIONES];
-long maxNumPrimitivesDS = 0;
-long minNumPrimitivesDS = 0;
-int numSpfExtra = 0;
 float* createSamplerPtos();
 
 D3D12MeshletRender::D3D12MeshletRender(UINT width, UINT height, std::wstring name)
@@ -362,13 +247,6 @@ void D3D12MeshletRender::LoadAssets()
             uint32_t size; 
         } meshShader, pixelShader;
 
-        //ID3DBlob* pBlobPS = NULL;
-        //ID3DBlob* pBlobPSSolid = NULL;
-
-        //ID3D10Blob* pErrorBlob = NULL;
-        //D3DCompileFromFile(L"Nurbs4.hlsl", NULL, NULL, "PS", "ps_5_0", D3D10_SHADER_ENABLE_STRICTNESS, NULL, &pBlobPS, &pErrorBlob);
-        //D3DCompileFromFile(L"Nurbs4.hlsl", NULL, NULL, "SolidColorPS", "ps_5_0", D3D10_SHADER_ENABLE_STRICTNESS, NULL, &pBlobPSSolid, &pErrorBlob);
-
         ReadDataFromFile(GetAssetFullPath(c_meshShaderFilename).c_str(), &meshShader.data, &meshShader.size);
         ReadDataFromFile(GetAssetFullPath(c_pixelShaderFilename).c_str(), &pixelShader.data, &pixelShader.size);
 
@@ -383,10 +261,9 @@ void D3D12MeshletRender::LoadAssets()
         psoDesc.RTVFormats[0]         = m_renderTargets[0]->GetDesc().Format;
         psoDesc.DSVFormat             = m_depthStencil->GetDesc().Format;
         CD3DX12_RASTERIZER_DESC l_cWireframeRasterizer(D3D12_DEFAULT);
-        l_cWireframeRasterizer.FillMode = D3D12_FILL_MODE_WIREFRAME;
+        //l_cWireframeRasterizer.FillMode = D3D12_FILL_MODE_WIREFRAME;
         //l_cWireframeRasterizer.FrontCounterClockwise = TRUE;
         psoDesc.RasterizerState       = CD3DX12_RASTERIZER_DESC(l_cWireframeRasterizer);    // CW front; cull back
-        //psoDesc.RasterizerState       = CD3DX12_RASTERIZER_DESC(D3D12_FILL_MODE_WIREFRAME, D3D12_CULL_MODE_BACK, false, D3D12_DEFAULT_DEPTH_BIAS, D3D12_DEFAULT_DEPTH_BIAS_CLAMP, D3D12_DEFAULT_SLOPE_SCALED_DEPTH_BIAS, true, false, false, 0, D3D12_CONSERVATIVE_RASTERIZATION_MODE_OFF);    // CW front; cull back
         psoDesc.BlendState            = CD3DX12_BLEND_DESC(D3D12_DEFAULT);         // Opaque
         psoDesc.DepthStencilState     = CD3DX12_DEPTH_STENCIL_DESC(D3D12_DEFAULT); // Less-equal depth test w/ writes; no stencil
         psoDesc.SampleMask            = UINT_MAX;
@@ -414,19 +291,8 @@ void D3D12MeshletRender::LoadAssets()
     file.open("FPS.txt", ios::app);
     numFich = 17;
     file << Configuracion::getConfiguracion().getNombreFich(numFich);
-    //setVertex(pd3dDevice);
-    //En setVertex es donde se llama a leerNurbs, pasar esa funcion a directx 12
     gEscena->leerNurbs(numFich);
-    gEscena->obtenerVertices();
-    info = new InfoNurbs(gEscena->getNurbs(), gEscena->getNumSpf());
-    /*int aux = 0;
-    int* nSpfAux = info->getNumSpfC();
-    for (uint32_t j = 0; j < gEscena->getNumNurbs(); ++j)
-    {
-        aux = aux + nSpfAux[j];
-    }
-    numSpfExtra = aux;*/
-    m_model.LoadFromFileN(c_meshFilename, gEscena);
+    m_model.LoadFromFileN();
     m_model.UploadGpuResourcesN(m_device.Get(), m_commandQueue.Get(), m_commandAllocators[m_frameIndex].Get(), m_commandList.Get(), gEscena);
 
 #ifdef _DEBUG
@@ -445,9 +311,6 @@ void D3D12MeshletRender::LoadAssets()
             assert(std::memcmp(&mesh.LayoutElems[i], &c_elementDescs[i], sizeof(D3D12_INPUT_ELEMENT_DESC)) == 0);
     }
 #endif
-    
-    //SAFE_RELEASE(pBlobPS);
-    //SAFE_RELEASE(pBlobPSSolid);
 
     // Create synchronization objects and wait until assets have been uploaded to the GPU.
     {
@@ -564,25 +427,17 @@ void D3D12MeshletRender::PopulateCommandList()
 
     for (auto& mesh : m_model)
     {
-        m_commandList->SetGraphicsRoot32BitConstant(1, mesh.IndexSize, 0);
-        m_commandList->SetGraphicsRootShaderResourceView(2, mesh.VertexResources[0]->GetGPUVirtualAddress());
-        m_commandList->SetGraphicsRootShaderResourceView(3, mesh.MeshletResource->GetGPUVirtualAddress());
-        m_commandList->SetGraphicsRootShaderResourceView(4, mesh.UniqueVertexIndexResource->GetGPUVirtualAddress());
-        m_commandList->SetGraphicsRootShaderResourceView(5, mesh.PrimitiveIndexResource->GetGPUVirtualAddress());
-        m_commandList->SetGraphicsRootShaderResourceView(6, mesh.KnotUResource->GetGPUVirtualAddress());
-        m_commandList->SetGraphicsRootShaderResourceView(7, mesh.KnotVResource->GetGPUVirtualAddress());
-        m_commandList->SetGraphicsRootShaderResourceView(8, mesh.PtosResource->GetGPUVirtualAddress());
-        m_commandList->SetGraphicsRootShaderResourceView(9, mesh.WeightResource->GetGPUVirtualAddress());
-        m_commandList->SetGraphicsRootShaderResourceView(10, mesh.NumPtosResource->GetGPUVirtualAddress());
-        //m_commandList->SetGraphicsRootShaderResourceView(11, mesh.NumSpfResource->GetGPUVirtualAddress());
-        m_commandList->SetGraphicsRootShaderResourceView(11, mesh.TablaKnotsResource->GetGPUVirtualAddress());
-        m_commandList->SetGraphicsRootShaderResourceView(12, mesh.TablaPtosResource->GetGPUVirtualAddress());
-        m_commandList->SetGraphicsRootShaderResourceView(13, mesh.infoNurbsVertexResource->GetGPUVirtualAddress());
+        m_commandList->SetGraphicsRootShaderResourceView(1, mesh.KnotUResource->GetGPUVirtualAddress());
+        m_commandList->SetGraphicsRootShaderResourceView(2, mesh.KnotVResource->GetGPUVirtualAddress());
+        m_commandList->SetGraphicsRootShaderResourceView(3, mesh.PtosResource->GetGPUVirtualAddress());
+        m_commandList->SetGraphicsRootShaderResourceView(4, mesh.WeightResource->GetGPUVirtualAddress());
+        m_commandList->SetGraphicsRootShaderResourceView(5, mesh.TablaKnotsResource->GetGPUVirtualAddress());
+        m_commandList->SetGraphicsRootShaderResourceView(6, mesh.TablaPtosResource->GetGPUVirtualAddress());
+        m_commandList->SetGraphicsRootShaderResourceView(7, mesh.indiceNurbsResource->GetGPUVirtualAddress());
 
-        for (auto& subset : mesh.MeshletSubsets)
+        //for (auto& subset : mesh.MeshletSubsets)
+        for (int i = 0; i < 1; i++)
         {
-            /*m_commandList->SetGraphicsRoot32BitConstant(1, subset.Offset, 1);
-            m_commandList->DispatchMesh(subset.Count, 1, 1);*/
             m_commandList->SetGraphicsRoot32BitConstant(1, 0, 1);
             m_commandList->DispatchMesh(gEscena->getNumSpf(), 1, 1);
         }
@@ -630,44 +485,6 @@ void D3D12MeshletRender::MoveToNextFrame()
     m_fenceValues[m_frameIndex] = currentFenceValue + 1;
 }
 
-/*
-void CALLBACK OnGUIEvent(UINT nEvent, int nControlID, CDXUTControl* pControl, void* pUserContext)
-{
-    switch (nControlID)
-    {
-        // Standard DXUT controls
-    case IDC_TOGGLEFULLSCREEN:
-        DXUTToggleFullScreen(); break;
-    case IDC_TOGGLEREF:
-        DXUTToggleREF(); break;
-    case IDC_CHANGEDEVICE:
-        g_D3DSettingsDlg.SetActive(!g_D3DSettingsDlg.IsActive()); break;
-
-        // Custom app controls
-    case IDC_PATCH_SUBDIVS:
-    {
-        g_fSubdivs = g_SampleUI.GetSlider(IDC_PATCH_SUBDIVS)->GetValue() / 10.0f;
-
-        WCHAR sz[100];
-        swprintf_s(sz, L"Patch Divisions: %2.1f", g_fSubdivs);
-        g_SampleUI.GetStatic(IDC_PATCH_SUBDIVS_STATIC)->SetText(sz);
-    }
-    break;
-    case IDC_TOGGLE_LINES:
-        g_bDrawWires = g_SampleUI.GetCheckBox(IDC_TOGGLE_LINES)->GetChecked();
-        break;
-    case IDC_PARTITION_INTEGER:
-        g_iPartitionMode = PARTITION_INTEGER;
-        break;
-    case IDC_PARTITION_FRAC_EVEN:
-        g_iPartitionMode = PARTITION_FRACTIONAL_EVEN;
-        break;
-    case IDC_PARTITION_FRAC_ODD:
-        g_iPartitionMode = PARTITION_FRACTIONAL_ODD;
-        break;
-    }
-}*/
-
 float* createSamplerPtos() {
     int numPtos = info->getNumPtos() / 3;
     float* X = gEscena->getXs();
@@ -686,7 +503,4 @@ float* createSamplerPtos() {
         ptos[cont] = pesos[i];
     }
     return ptos;
-    //const GUID id={ 0};
-    //g_ptbPtos->SetPrivateData(id,sizeof(float)*18000*4, ptos);
-
 }

@@ -39,9 +39,11 @@ struct Subset
 
 struct MeshInfo
 {
-    DirectX::XMFLOAT3 Pos;
-    DirectX::XMFLOAT3 Patch;
-    DirectX::XMFLOAT2 Tex;
+    uint32_t IndexSize;
+    uint32_t MeshletCount;
+
+    uint32_t LastMeshletVertCount;
+    uint32_t LastMeshletPrimCount;
 };
 
 struct Meshlet
@@ -90,32 +92,22 @@ struct Mesh
     Span<float>              KnotV;
     Span<float>              Ptos;
     Span<float>              Weight;
-    Span<uint8_t>              NPtos;
     Span<uint8_t>              NSpf;
     std::vector<Span<float>>              TablaKnots;
     std::vector<Span<float>>              TablaPtos;
-    Span<NurbsVertex>              infoNurbsVertex;
+    Span<uint8_t>              indiceNurbs;
 
     // D3D resource references
     std::vector<D3D12_VERTEX_BUFFER_VIEW>  VBViews;
     D3D12_INDEX_BUFFER_VIEW                IBView;
 
-    std::vector<Microsoft::WRL::ComPtr<ID3D12Resource>> VertexResources;
-    Microsoft::WRL::ComPtr<ID3D12Resource>              IndexResource;
-    Microsoft::WRL::ComPtr<ID3D12Resource>              MeshletResource;
-    Microsoft::WRL::ComPtr<ID3D12Resource>              UniqueVertexIndexResource;
-    Microsoft::WRL::ComPtr<ID3D12Resource>              PrimitiveIndexResource;
-    Microsoft::WRL::ComPtr<ID3D12Resource>              CullDataResource;
-    Microsoft::WRL::ComPtr<ID3D12Resource>              MeshInfoResource;
     Microsoft::WRL::ComPtr<ID3D12Resource>              KnotUResource;
     Microsoft::WRL::ComPtr<ID3D12Resource>              KnotVResource;
     Microsoft::WRL::ComPtr<ID3D12Resource>              PtosResource;
     Microsoft::WRL::ComPtr<ID3D12Resource>              WeightResource;
-    Microsoft::WRL::ComPtr<ID3D12Resource>              NumPtosResource;
-    Microsoft::WRL::ComPtr<ID3D12Resource>              NumSpfResource;
     Microsoft::WRL::ComPtr<ID3D12Resource>              TablaKnotsResource;
     Microsoft::WRL::ComPtr<ID3D12Resource>              TablaPtosResource;
-    Microsoft::WRL::ComPtr<ID3D12Resource>              infoNurbsVertexResource;
+    Microsoft::WRL::ComPtr<ID3D12Resource>              indiceNurbsResource;
 
     // Calculates the number of instances of the last meshlet which can be packed into a single threadgroup.
     uint32_t GetLastMeshletPackCount(uint32_t subsetIndex, uint32_t maxGroupVerts, uint32_t maxGroupPrims) 
@@ -154,9 +146,7 @@ struct Mesh
 class Model
 {
 public:
-    HRESULT LoadFromFile(const wchar_t* filename);
-    HRESULT LoadFromFileN(const wchar_t* filename, EscenaNurbs* gEscena);
-    HRESULT UploadGpuResources(ID3D12Device* device, ID3D12CommandQueue* cmdQueue, ID3D12CommandAllocator* cmdAlloc, ID3D12GraphicsCommandList* cmdList);
+    HRESULT LoadFromFileN();
     HRESULT UploadGpuResourcesN(ID3D12Device* device, ID3D12CommandQueue* cmdQueue, ID3D12CommandAllocator* cmdAlloc, ID3D12GraphicsCommandList* cmdList, EscenaNurbs* gEscena);
 
     uint32_t GetMeshCount() const { return static_cast<uint32_t>(m_meshes.size()); }
