@@ -1,94 +1,115 @@
-﻿  D3D12MeshletRender.cpp
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(84,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(88,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(92,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(96,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.h(38,7): warning C4101: 'numPtos': variable local sin referencia
+﻿MeshletMS.hlsl(334,48): warning GF0156036: variable 'posU' may be uninitialized when used here
+                          ptoCtrlA = NurbsEval2(meshletIndex, iu, iv, posU, posV);
+                                                                      ^~~~
+  MeshletMS.hlsl:260:12: note: initialize the variable 'posU' to silence this warning
+          float posU, posV;
+                    ^
+                     = 0.0
+MeshletMS.hlsl(334,54): warning GF0156036: variable 'posV' may be uninitialized when used here
+                          ptoCtrlA = NurbsEval2(meshletIndex, iu, iv, posU, posV);
+                                                                            ^~~~
+  MeshletMS.hlsl:260:18: note: initialize the variable 'posV' to silence this warning
+          float posU, posV;
+                          ^
+                           = 0.0
+  
+  stdafx.cpp
+  D3D12MeshletRender.cpp
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(84,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(88,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(92,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(96,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.h(38,7): warning C4101: 'numPtos': variable local sin referencia
+  DXSample.cpp
   EscenaNurbs.cpp
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\LeerNurbs.h(16,19): warning C4309: 'inicializando': truncamiento de valor constante
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\LeerNurbs.h(43,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\LeerNurbs.h(59,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\LeerNurbs.h(62,1): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\LeerNurbs.h(68,1): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\LeerNurbs.h(84,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\LeerNurbs.h(89,1): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(84,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(88,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(92,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(96,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.h(38,7): warning C4101: 'numPtos': variable local sin referencia
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(36,9): warning C4101: 'ptosNew': variable local sin referencia
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(143,9): warning C4101: 'ptosNew': variable local sin referencia
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(150,7): warning C4101: 'm': variable local sin referencia
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(209,34): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(210,22): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(540,21): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(541,21): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(542,21): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(543,21): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(560,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(569,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(580,25): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(596,35): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(596,29): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(596,23): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(604,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(606,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(608,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(610,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(516,12): warning C4101: 'fin': variable local sin referencia
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(517,6): warning C4101: 'info': variable local sin referencia
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(521,6): warning C4101: 'aux': variable local sin referencia
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(516,6): warning C4101: 'inic': variable local sin referencia
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(707,50): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(743,20): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(744,22): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(748,22): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(751,24): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(760,45): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(762,66): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(762,62): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\LeerNurbs.h(16,19): warning C4309: 'inicializando': truncamiento de valor constante
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\LeerNurbs.h(43,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\LeerNurbs.h(59,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\LeerNurbs.h(62,1): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\LeerNurbs.h(68,1): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\LeerNurbs.h(84,1): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\LeerNurbs.h(89,1): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(84,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(88,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(92,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(96,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.h(38,7): warning C4101: 'numPtos': variable local sin referencia
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(36,9): warning C4101: 'ptosNew': variable local sin referencia
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(143,9): warning C4101: 'ptosNew': variable local sin referencia
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(150,7): warning C4101: 'm': variable local sin referencia
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(209,34): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(210,22): warning C4267: 'inicializando': conversión de 'size_t' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(540,21): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(541,21): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(542,21): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(543,21): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(560,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(569,24): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(580,25): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(596,35): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(596,29): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(596,23): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(604,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(606,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(608,34): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(610,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(516,12): warning C4101: 'fin': variable local sin referencia
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(517,6): warning C4101: 'info': variable local sin referencia
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(521,6): warning C4101: 'aux': variable local sin referencia
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(516,6): warning C4101: 'inic': variable local sin referencia
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(707,50): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(743,20): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(744,22): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(748,22): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(751,24): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(760,45): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(762,66): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.cpp(762,62): warning C4244: 'argumento': conversión de 'int' a 'float'; posible pérdida de datos
   InfoNurbs.cpp
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(84,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(88,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(92,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(96,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\InfoNurbs.cpp(164,26): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\InfoNurbs.cpp(165,26): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\InfoNurbs.cpp(169,27): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\InfoNurbs.cpp(170,27): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(84,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(88,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(92,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(96,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\InfoNurbs.cpp(164,26): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\InfoNurbs.cpp(165,26): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\InfoNurbs.cpp(169,27): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\InfoNurbs.cpp(170,27): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+  LeerNurbs.cpp
   Main.cpp
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(84,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(88,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(92,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(96,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.h(38,7): warning C4101: 'numPtos': variable local sin referencia
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(84,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(88,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(92,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(96,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.h(38,7): warning C4101: 'numPtos': variable local sin referencia
   Model.cpp
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(84,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(88,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(92,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(96,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.h(38,7): warning C4101: 'numPtos': variable local sin referencia
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(84,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(88,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(92,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.h(96,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.h(38,7): warning C4101: 'numPtos': variable local sin referencia
+  Punto.cpp
+  SimpleCamera.cpp
   SpfNurbs.cpp
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(86,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(90,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(94,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(98,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(219,12): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(220,12): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(221,12): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(223,12): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(224,12): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(225,12): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(228,10): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(232,16): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(212,15): warning C4101: 'resY': variable local sin referencia
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(212,21): warning C4101: 'resZ': variable local sin referencia
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(212,9): warning C4101: 'resX': variable local sin referencia
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(86,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(90,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(94,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(98,14): warning C4244: 'return': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(219,12): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(220,12): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(221,12): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(223,12): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(224,12): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(225,12): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(228,10): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(232,16): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(212,15): warning C4101: 'resY': variable local sin referencia
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(212,21): warning C4101: 'resZ': variable local sin referencia
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(212,9): warning C4101: 'resX': variable local sin referencia
+  Win32Application.cpp
   Generando código...
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(142): warning C4715: 'SpfNurbs::getWeight': no todas las rutas de acceso de control devuelven un valor
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(167): warning C4715: 'SpfNurbs::getPunto': no todas las rutas de acceso de control devuelven un valor
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(203): warning C4715: 'SpfNurbs::getKnotV': no todas las rutas de acceso de control devuelven un valor
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(198): warning C4715: 'SpfNurbs::getKnotU': no todas las rutas de acceso de control devuelven un valor
-C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.h(48): warning C4715: 'EscenaNurbs::getNurbs': no todas las rutas de acceso de control devuelven un valor
-  D3D12MeshletRender.vcxproj -> C:\Users\Usuario\Desktop\EvalNurbs6\D3D12MeshShaders\src\MeshletRender\bin\x64\Debug\D3D12MeshletRender.exe
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(142): warning C4715: 'SpfNurbs::getWeight': no todas las rutas de acceso de control devuelven un valor
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(167): warning C4715: 'SpfNurbs::getPunto': no todas las rutas de acceso de control devuelven un valor
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(198): warning C4715: 'SpfNurbs::getKnotU': no todas las rutas de acceso de control devuelven un valor
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\SpfNurbs.cpp(203): warning C4715: 'SpfNurbs::getKnotV': no todas las rutas de acceso de control devuelven un valor
+C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\EscenaNurbs.h(48): warning C4715: 'EscenaNurbs::getNurbs': no todas las rutas de acceso de control devuelven un valor
+  D3D12MeshletRender.vcxproj -> C:\Users\Usuario\Desktop\EvalNurbs5\D3D12MeshShaders\src\MeshletRender\bin\x64\Debug\D3D12MeshletRender.exe

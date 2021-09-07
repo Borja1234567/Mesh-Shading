@@ -9,6 +9,9 @@
 //
 //*********************************************************
 
+//Agradecimientos a los tutoriales de DirectX 12 https://github.com/microsoft/DirectX-Graphics-Samples/ , dado que use uno
+//de sus ejemplos como base para desarrollar este programa
+
 #include "stdafx.h"
 #include "D3D12MeshletRender.h"
 #include "EscenaNurbs.h"
