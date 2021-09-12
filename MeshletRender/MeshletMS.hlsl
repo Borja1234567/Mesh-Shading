@@ -43,66 +43,6 @@ StructuredBuffer<float3>  tablaPtos			  : register(t5);
 StructuredBuffer<float4>  tablaKnots		  : register(t4);
 StructuredBuffer<uint>   indiceNurbs			  : register(t6);
 
-float4 BasisFuncU(int i, float u, int p) {
-	float left[5];
-	float right[5];
-	float saved;
-	float N[5];
-	N[0] = 1.0;
-	float temp;
-	float4 result;
-
-	for (int j = 1; j <= p; j++) {
-		left[j] = u - knotsU[i + 1 - j];
-		right[j] = knotsU[i + j] - u;
-		saved = 0.0f;
-		for (int r = 0; r < j; r++) {
-			temp = (float)(N[r] / (right[r + 1] + left[j - r]));
-			N[r] = saved + right[r + 1] * temp;
-			saved = left[j - r] * temp;
-		}
-		N[j] = saved;
-	}
-
-	result.x = N[0];
-	result.y = N[1];
-	result.z = N[2];
-	result.w = N[3];
-	return result;
-
-
-}
-
-
-float4 BasisFuncV(int i, float u, int p) {
-	float left[5];
-	float right[5];
-	float saved;
-	float N[5];
-	N[0] = 1.0;
-	float temp;
-	float4 result;
-
-	for (int j = 1; j <= p; j++) {
-		left[j] = u - knotsV[i + 1 - j];
-		right[j] = knotsV[i + j] - u;
-		saved = 0.0f;
-		for (int r = 0; r < j; r++) {
-			temp = (float)(N[r] / (right[r + 1] + left[j - r]));
-			N[r] = saved + right[r + 1] * temp;
-			saved = left[j - r] * temp;
-		}
-		N[j] = saved;
-	}
-
-	result.x = N[0];
-	result.y = N[1];
-	result.z = N[2];
-	result.w = N[3];
-	return result;
-
-}
-
 float3 calcNormal(float3 v1, float3 v2, float3 v3) {
 
 	float3 normal;
